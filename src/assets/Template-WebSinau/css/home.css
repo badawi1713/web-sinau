@@ -1,65 +1,6 @@
-<template>
-    <div class="wrapper">
-        <div class="sidebar">
-            <div class="brand">
-                <img src="../assets/Logo.svg" alt="image-logo" class="logo-text">
-            </div>
-            <ul>
-                <li><a href="#"><i class="fas fa-columns"></i>Dashboard</a></li>
-                <li class="active"><a href="#"><i class="fas fa-user"></i>Participant</a></li>
-                <li><a href="#"><i class="fas fa-calendar"></i>Schedule</a></li>
-                <li><a href="#"><i class="fas fa-graduation-cap"></i>Participants Pass</a></li>
-            </ul>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 
-        </div>
-        <div class="main_content">
-            <div class="container">
-                <div class="semua">
-                    <div class="header-table">
-                        <div class="title">
-                            <h2>Add Participant</h2>
-                        </div>
-                    </div>
-                    <!-- Form Add Participant -->
-                    <div class="input-form">
-                    <form action="" method="post">
-                        <div class="input-label">
-                        <label for="">Insert Name</label>
-                        <input placeholder="Full Name" type="text" name="name" id="">
-                    </div>
-                    <div class="input-label">
-                        <label for="">Phone Number</label>
-                        <input placeholder="eg: 082136526372" type="text" name="telephone" id="">
-                    </div>
-                    <div class="input-label">
-                        <label for="">Username</label>
-                        <input placeholder="eg: badawi1713" type="text" name="username" id="">
-                    </div>
-                    <div class="input-label">
-                        <label for="">Address</label>
-                        <input placeholder="Valid Address" type="text" name="address" id="">
-                    </div>
-                    <div class="button-class">
-                        <button class="cancel">Cancel</button>
-                        <button class="submit">Save</button>
-                    </div>
-                    </form>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-
-<script>
-export default {
-    
-}
-</script>
-
-<style lang="scss" scoped>
-    * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -68,10 +9,14 @@ export default {
     font-family: "Montserrat", sans-serif;
 }
 
+body {
+    background-color: #edf1f8;
+}
+
 .wrapper {
     display: flex;
     position: relative;
-background-color: #edf1f8;
+
 }
 
 .wrapper .sidebar {
@@ -160,12 +105,99 @@ background-color: #edf1f8;
     padding: 21px;
 }
 
+.container .button {
+    float: right;
+    height: inherit;
+    width: 50%;
+    padding: 21px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-table .button input {
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    width: 80%;
+    border-radius: 5px;
+    padding-left: 1rem;
+    transition: box-shadow 0.5s ease;
+    margin-right: 15px;
+}
+
+.header-table .button input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: lightslategrey;
+    font-weight: bold;
+}
+
+.header-table .button button {
+    border-radius: 5px;
+    height: 40px;
+    width: 40%;
+    padding: auto;
+    color: white;
+    background-color: crimson;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease;
+}
+
+.header-table .button button:hover {
+    background-color: rgb(190, 22, 56);
+    box-shadow: 0px 0px 10px grey;
+}
+
+.content-table tbody button.error {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content-table tbody button.error:hover {
+    background-color: rgb(226, 12, 12);
+    box-shadow: 0px 0px 10px grey;
+    color: white;
+}
+
 .container .title h2 {
     margin: 9px;
     color: #01111c;
 }
 
+.content-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    /* border: 1px solid black; */
+    min-width: 400px;
+    overflow: hidden;
+    margin: 10px 0;
+}
 
+.content-table thead tr {
+    text-align: left;
+}
+
+.content-table thead tr th {
+    font-weight: normal;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 35px;
+}
+
+.content-table td {
+    font-weight: bold;
+}
 
 /* FORM ADD PARTICIPANT */
 .input-form {
@@ -225,4 +257,3 @@ button.submit {
     color: white;
     font-size: 16px;
 }
-</style>

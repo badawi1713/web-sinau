@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #edf1f8;
+    font-family: "Monstserrat", sans-serif;
+}
+
+header {
+    background-color: white;
+    height: 66px;
+}
+
+header * {
+    color: #01111c;
+}
+
+header .logo {
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+}
+
+header .logo img {
+    height: 80%;
+}
+
+header .logo-text {
+    margin: 9px
+}
+
+header ul{
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: inherit;
+}
+
+header ul li{
+    float: left;
+    position: relative;
+    height: inherit;
+}
+
+header ul li a{
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+    height: inherit;
+}
+
+header ul li a:hover{
+    background-color: #df205b;
+    color: white;
+    transition: 0.5s;
+}
+
+header ul li ul {
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+    display: none;
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li ul li a {
+    padding: 10px;
+    background-color: white;
+    color: #444
+}
+
+header ul li ul li a.logout{
+    background-color: white;
+    color: red;
+}
+
+/* header ul li ul li a.l:hover{
+    background-color: rgb(155,150,150);
+} */
+
+
+/* LOGIN FORM */
+.login-page {
+    height: 100vh;
+    position: relative;
+}
+
+.login-page .box {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+}
+
+.login-page .box .form-head h2 {
+    text-align: center;
+    margin: 10px 0px;
+    color: #01111c;
+    margin-bottom: 2rem;
+}
+
+.login-page .box .form-head p{
+    text-align: center;
+    margin: 10px 0px;
+    color: crimson;
+    margin-bottom: 3rem;
+}
+
+.login-page .box .form-body {
+    display:flex;
+    flex-direction: column;
+}
+
+.login-page .box .form-body input {
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 1rem;
+    transition: box-shadow 0.5s ease;
+}
+
+.login-page .box .form-body input:focus{
+    box-shadow: 0px 0px 10px crimson;
+    border-color: crimson;
+    border-radius: 5px;
+}
+
+.login-page .box .form-body input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: darkslategrey;
+}
+
+.login-page .box .form-footer button {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 50px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login-page .box .form-footer button:hover{
+    box-shadow: 0px 0px 10px rgb(165, 18, 48);
+    background-color: rgb(150, 29, 53);
+}
